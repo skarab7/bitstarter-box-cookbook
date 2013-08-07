@@ -1,4 +1,4 @@
-name             'bitstarter-box-cookbook'
+name             'bitstarter-box'
 maintainer       'skarab7'
 maintainer_email 'sk'
 license          'All rights reserved'
