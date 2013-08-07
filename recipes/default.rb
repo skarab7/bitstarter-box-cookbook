@@ -12,3 +12,5 @@ execute "apt-get-update" do
 end
 
 include_recipe "bitstarter-box::basic_setup"  
+
+include_recipe "bitstarter-box::retrieve_bitstarter_app"

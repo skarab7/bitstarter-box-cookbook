@@ -20,3 +20,7 @@ suites:
    bitstarter_box_cookbook: 
       user:  "vagrant"
       group: "vagrant"
+      bitstarter_app:
+        git_repo: "https://github.com/skarab7/bitstarter.git"
+        install_directory: "workspace/bitstarter"
+        reference: master
