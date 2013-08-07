@@ -4,7 +4,7 @@ nvmVersion = "v0.10.12"
 
 basicPackages    = ["git", "git-flow", "curl", "rlwrap"]
 emacsPackages    = ["emacs24-nox", "emacs24-el", "emacs24-common-non-dfsg"]
-dotFilesImported = [".screenrc", ".bash_profile" ".bashrc", ".bashrc_custom", ".emacs.d"]
+dotFilesImported = [".screenrc", ".bash_profile", ".bashrc", ".bashrc_custom", ".emacs.d"]
 
 basicPackages.each do |p|
 	package p do
@@ -64,6 +64,9 @@ end
 
 bash "backup old dotfiles" do
 	cwd "/home/#{user}/"
+	user  user
+	group group
+	
 	code <<-EOH
 		if [ -d ./dotfiles/ ]; then
 			mv dotfiles dotfiles.old
@@ -87,6 +90,9 @@ git "/home/#{user}/dotfiles" do
 
 dotFilesImported.each do |file|
 	 bash "ln #{file}" do
+	 	user  user
+		group group
+
 		cwd "/home/#{user}/"
 	  	code <<-EOH
 			ln -sb  dotfiles/#{file}

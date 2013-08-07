@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: bitstarter-box-cookbook
+# Cookbook Name:: bitstarter-box
 # Recipe:: default
 #
 # Copyright (C) 2013 skarab7
@@ -11,4 +11,4 @@ execute "apt-get-update" do
   command "apt-get update"
 end
 
-include_recipe "bitstarter-box-cookbook::basic_setup"  
+include_recipe "bitstarter-box::basic_setup"  
