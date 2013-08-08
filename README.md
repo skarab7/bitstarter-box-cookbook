@@ -5,6 +5,8 @@ Cookbook for setting up an amazon box for the Startup Eng course.
 
 # Usage
 
+See .kitchen.yml.
+
 # Attributes
 
 # Recipes
