@@ -17,7 +17,7 @@ suites:
 - name: default
   run_list: ["recipe[bitstarter-box]", "recipe[minitest-handler]" ]
   attributes: 
-   bitstarter_box_cookbook: 
+   bitstarter_box: 
       user:  "vagrant"
       group: "vagrant"
       bitstarter_app:

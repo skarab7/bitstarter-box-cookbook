@@ -1,5 +1,5 @@
-user       = node[:bitstarter_box_cookbook][:user]
-group      = node[:bitstarter_box_cookbook][:group]
+user       = node[:bitstarter_box][:user]
+group      = node[:bitstarter_box][:group]
 nvmVersion = "v0.10.12"
 
 basicPackages    = ["git", "git-flow", "curl", "rlwrap"]

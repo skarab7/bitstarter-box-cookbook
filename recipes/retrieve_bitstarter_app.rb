@@ -1,8 +1,8 @@
-gitUrl     = node[:bitstarter_box_cookbook][:bitstarter_app][:git_repo]
-reference  = node[:bitstarter_box_cookbook][:bitstarter_app][:reference]
-targetDir  = node[:bitstarter_box_cookbook][:bitstarter_app][:install_directory]
-user       = node[:bitstarter_box_cookbook][:user]
-group      = node[:bitstarter_box_cookbook][:group]
+gitUrl     = node[:bitstarter_box][:bitstarter_app][:git_repo]
+reference  = node[:bitstarter_box][:bitstarter_app][:reference]
+targetDir  = node[:bitstarter_box][:bitstarter_app][:install_directory]
+user       = node[:bitstarter_box][:user]
+group      = node[:bitstarter_box][:group]
 
 
 
