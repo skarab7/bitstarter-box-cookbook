@@ -1,4 +1,5 @@
-# bitstarter-box-cookbook cookbook
+# bitstarter-box cookbook
+Cookbook for setting up an amazon box for the Startup Eng course.
 
 # Requirements
 
@@ -10,4 +11,5 @@
 
 # Author
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: skarab7 (sk)
+
