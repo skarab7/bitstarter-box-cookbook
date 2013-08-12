@@ -15,12 +15,12 @@ platforms:
 
 suites:
 - name: default
-  run_list: ["recipe[bitstarter-box]", "recipe[minitest-handler]" ]
+  run_list: ["recipe[bitstarter-box]", "recipe[bitstarter-box-test]", "recipe[minitest-handler]" ]
   attributes: 
    bitstarter_box: 
       user:  "vagrant"
       group: "vagrant"
       bitstarter_app:
-        git_repo: "https://github.com/skarab7/bitstarter.git"
+        git_repo:          "https://github.com/skarab7/bitstarter.git"
         install_directory: "workspace/bitstarter"
         reference: master

@@ -1,6 +1,6 @@
 user       = node[:bitstarter_box][:user]
 group      = node[:bitstarter_box][:group]
-nvmVersion = "v0.10.12"
+nvmVersion = node[:bitstarter_box][:nvm_version]
 
 basicPackages    = ["git", "git-flow", "curl", "rlwrap"]
 emacsPackages    = ["emacs24-nox", "emacs24-el", "emacs24-common-non-dfsg"]
@@ -22,6 +22,7 @@ end
 
 execute "apt-get-update" do
   command "apt-get update"
+  ignore_failure true
 end
 
 emacsPackages.each do |d|

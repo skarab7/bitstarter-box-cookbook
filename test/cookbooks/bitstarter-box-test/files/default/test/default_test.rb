@@ -24,7 +24,7 @@ describe_recipe 'bitstarter-box-cookbook::default' do
 		it "runs bitstart-app" do
 			app_port = node[:bitstarter_box][:bitstarter_app][:port]
 
-			assert shell_out("curl -ks -o /dev/null -w '%{http_code}'  http://127.0.0.1").stdout.include?("200")
+			assert shell_out("curl -ks -o /dev/null -w '%{http_code}'  http://127.0.0.1:#{app_port}").stdout.include?("200")
 		end	
 
 	end
