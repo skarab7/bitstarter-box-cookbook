@@ -3,7 +3,7 @@ reference  = node[:bitstarter_box][:bitstarter_app][:reference]
 targetDir  = node[:bitstarter_box][:bitstarter_app][:install_directory]
 user       = node[:bitstarter_box][:user]
 group      = node[:bitstarter_box][:group]
-
+nvmVersion = node[:bitstarter_box][:nvm_version]   
 
 
 directory "/home/#{user}/#{targetDir}" do
@@ -23,4 +23,16 @@ git "/home/#{user}/#{targetDir}" do
    repository gitUrl
    reference "master"
    action :sync
+ end
+
+
+ bash "npm-install express locally" do
+
+ 	cwd "/home/#{user}/#{targetDir}"
+
+ 	code <<-EOH
+ 	 source /home/#{user}/.nvm/nvm.sh
+     nvm use #{nvmVersion}
+ 	 npm install express	
+ 	EOH
  end

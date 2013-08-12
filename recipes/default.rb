@@ -9,8 +9,11 @@
 
 execute "apt-get-update" do
   command "apt-get update"
+  ignore_failure true
 end
 
 include_recipe "bitstarter-box::basic_setup"  
 
 include_recipe "bitstarter-box::retrieve_bitstarter_app"
+
+include_recipe "bitstarter-box::start_app"
